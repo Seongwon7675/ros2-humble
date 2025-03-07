@@ -7,3 +7,7 @@ ls /dev/ttyUSB*
 
 # 포트 권한 설정 / 포트 권한이 없을 수 있음.
 sudo chmod 666 /dev/ttyUSB0
+
+# rp lidar a1 실행 -> 자동으로 rviz2까지 실행됨.
+ros2 launch rplidar_ros view_rplidar_a1_launch.py
+
