@@ -1,0 +1,16 @@
+# 우분투 22.04 흑백화면 고치는 법
+linux /boot/vmlinuz-xxxx root=UUID=xxx ro quiet splash -> linux /boot/vmlinuz-xxxx root=UUID=xxx ro quiet splash nomodeset
+
+# 영구적으로 nomodeset 고정법
+sudo nano /etc/default/grub 로 편집기를 열어
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash 부분에 nomodeset 추가 후 ctrl+x로 저장.
+편집기를 나와 sudo update-grub
+reboot
+
+# 우분투 22.04 한글 쓰는 법
+sudo apt install-y fctix-hangul
+로그아웃+로그인 후
+fcitx-config-gtk3
+로 언어설정에 들어가 입력기 목록에서 Hangul추가/ only show current launguage를 해제해야 보임.
+환경설정에서 전역 설정(Global config)에서 Toggle key(ctrl+space)로 되있는 것을 한영키로 바꿔줌.
+reboot
