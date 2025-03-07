@@ -18,3 +18,13 @@ sudo apt update
 
 # ros2-humble 설치
 sudo apt install ros-humble-desktop
+
+# ros2 command not found 오류가 뜨면 ros2 환경 변수가 제대로 설정이 안된것.
+ls /opt/ros/humble/
+로 ROS2가 설치된 위치 확인 후 setub.bash 파일이 있으면
+source /opt/ros/humble/setup.bash
+
+# 위의 해결방법은 ros2 명령어가 안될 때마다 해줘야 하기에 bashrc파일에 추가하여 컴퓨터가 시작하면 자동으로 되게끔 해줘야함.
+echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+이러면 자동으로 ros2명령어 사용가능
