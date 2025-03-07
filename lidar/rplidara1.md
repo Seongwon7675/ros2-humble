@@ -11,3 +11,4 @@ sudo chmod 666 /dev/ttyUSB0
 # rp lidar a1 실행 -> 자동으로 rviz2까지 실행됨.
 ros2 launch rplidar_ros view_rplidar_a1_launch.py
 
+![Screenshot from 2025-03-07 13-46-24](https://github.com/user-attachments/assets/b5a33463-3b86-49c5-a8ae-fee89cde013c)
